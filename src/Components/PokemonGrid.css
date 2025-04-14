@@ -1,0 +1,141 @@
+/* Add these styles to your PokemonGrid.css file */
+
+.pokemon-browser {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 20px;
+    background-color: #1f2937;
+    min-height: 100vh;
+  }
+  
+  .controls {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 20px;
+  }
+  
+  .sort-select {
+    padding: 8px 12px;
+    border-radius: 4px;
+    background-color: #2d3748;
+    border: 1px solid #4a5568;
+    color: white;
+    cursor: pointer;
+  }
+  
+  .view-toggle {
+    display: flex;
+    gap: 10px;
+  }
+  
+  .view-button {
+    background-color: #2d3748;
+    border: 1px solid #4a5568;
+    border-radius: 4px;
+    color: white;
+    padding: 8px 12px;
+    cursor: pointer;
+  }
+  
+  .view-button.active {
+    background-color: #4a5568;
+  }
+  
+  /* Featured Bulbasaur Card */
+  .featured-pokemon-container {
+    display: flex;
+    justify-content: center;
+    margin-bottom: 30px;
+  }
+  
+  .featured-pokemon-card {
+    width: 100%;
+    max-width: 400px;
+    background-color: white;
+    border-radius: 12px;
+    padding: 24px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+  }
+  
+  .featured-pokemon-image {
+    width: 200px;
+    height: 200px;
+    margin-bottom: 16px;
+    object-fit: contain;
+  }
+  
+  .featured-pokemon-info {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  
+  .featured-pokemon-name {
+    font-size: 28px;
+    font-weight: bold;
+    margin: 8px 0;
+    color: #1a202c;
+  }
+  
+  .featured-pokemon-number {
+    font-size: 18px;
+    color: #718096;
+    margin: 0;
+  }
+  
+  /* Regular Pokemon Cards Grid/List View */
+  .pokemon-container {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+  }
+  
+  .pokemon-container.grid-view {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(220px, 1fr));
+    gap: 20px;
+  }
+  
+  .pokemon-container.list-view {
+    flex-direction: column;
+  }
+  
+  /* Pokemon Type Tags */
+  .pokemon-type {
+    display: inline-block;
+    padding: 6px 14px;
+    border-radius: 16px;
+    font-size: 14px;
+    font-weight: 600;
+  }
+  
+  .type-grass {
+    background-color: #c6f6d5;
+    color: #22543d;
+  }
+  
+  .type-rock {
+    background-color: #e2e8f0;
+    color: #4a5568;
+  }
+  
+  /* Responsive Layout */
+  @media (max-width: 768px) {
+    .pokemon-container.grid-view {
+      grid-template-columns: repeat(auto-fill, minmax(160px, 1fr));
+    }
+    
+    .featured-pokemon-card {
+      max-width: 300px;
+      padding: 16px;
+    }
+    
+    .featured-pokemon-image {
+      width: 150px;
+      height: 150px;
+    }
+  }
